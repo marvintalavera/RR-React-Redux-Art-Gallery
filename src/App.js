@@ -1,5 +1,5 @@
 import './App.css';
-import { useSelector, useDispatch, connect } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux'
 import { useEffect } from 'react';
 
 function App(props) {
@@ -13,11 +13,6 @@ function App(props) {
       return <p>image here</p>
     }
   }
-
-  useEffect(() => {
-    // dispatch fetchData
-  }, [props.objectId, dispatch])
-
 
   return (
     <div className="App">
@@ -46,7 +41,4 @@ function App(props) {
   );
 }
 
-
-const mapStateToProps = (state, ownProps) => ({ objectId: state.data.objectId })
-
-export default connect(mapStateToProps)(App);
+export default App;
