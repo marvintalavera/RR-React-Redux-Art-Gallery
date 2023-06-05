@@ -30,11 +30,11 @@ function App(props) {
           // dispatch prev
         }}>Back</button>
       </div>
-      <input value={ data.artId } onChange={(e) => {
+      <input value={ data?.artId } onChange={(e) => {
         // dispatch setArtId
       }} />
       <div>
-        {data.artId}
+        {data?.artId}
         {renderImg()}
       </div>
     </div>
