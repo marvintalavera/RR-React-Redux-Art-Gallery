@@ -7,7 +7,7 @@ function App(props) {
   const data = useSelector((state) => state.data)
 
   const renderImg = () => {
-    if(data.apiData) {
+    if(data?.apiData) {
       return <img style={{'width': '100vw'}} src={data.apiData.primaryImage} alt={data.apiData.title} />
     } else {
       return <p>image here</p>
