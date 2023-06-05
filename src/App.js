@@ -1,6 +1,5 @@
 import './App.css';
 import { useSelector, useDispatch, connect } from 'react-redux'
-import { clearData, fetchData, incrementId, decrementId, inputId } from './features/dataSlice'
 import { useEffect } from 'react';
 
 function App(props) {
@@ -16,20 +15,28 @@ function App(props) {
   }
 
   useEffect(() => {
-    dispatch(fetchData())
+    // dispatch fetchData
   }, [props.objectId, dispatch])
 
 
   return (
     <div className="App">
       <div>
-        <button onClick={() => dispatch(fetchData())}>Thunk!</button>
-        <button onClick={() => dispatch(clearData())}>Clear</button>
-        <button onClick={() => dispatch(incrementId())}>Next</button>
-        <button onClick={() => dispatch(decrementId())}>Back</button>
+        <button onClick={() => {
+          // dispatch fetchData
+        }}>Thunk!</button>
+        <button onClick={() => {
+          // dispatch reset
+        }}>Clear</button>
+        <button onClick={() => {
+          // dispatch next
+        }}>Next</button>
+        <button onClick={() => {
+          // dispatch prev
+        }}>Back</button>
       </div>
       <input value={ data.objectId } onChange={(e) => {
-        dispatch(inputId(Number(e.target.value)))
+        // dispatch setArtId
       }} />
       <div>
         {data.objectId}
